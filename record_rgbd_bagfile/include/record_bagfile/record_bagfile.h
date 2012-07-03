@@ -1,12 +1,10 @@
 #include <ros/ros.h>
-#include <pcl_ros/point_cloud.h>
 
 #include <rosbag/bag.h>
 #include <rosbag/view.h>
 
+#include <sensor_msgs/Image.h>
 #include <sensor_msgs/CameraInfo.h>
-
-#include <tf/transform_listener.h>
 
 #include <message_filters/subscriber.h>
 #include <message_filters/synchronizer.h>
@@ -47,8 +45,6 @@ private:
 
     ros::NodeHandle comm_nh_;
     NodeHandle param_nh_;
-
-    tf::TransformListener tf_listener_;
 
     message_filters::Subscriber<sensor_msgs::Image> rgb_img_sub_;
     message_filters::Subscriber<sensor_msgs::Image> depth_img_sub_;

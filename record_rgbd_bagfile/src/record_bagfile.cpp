@@ -7,6 +7,7 @@
 
 #include <sensor_msgs/image_encodings.h>
 
+#include <tf/tf.h>
 
 RecordBagfile::RecordBagfile(std::string bagfile_name, ros::NodeHandle comm_nh, ros::NodeHandle param_nh) :
         comm_nh_( comm_nh ),
