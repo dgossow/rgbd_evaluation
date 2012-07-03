@@ -19,8 +19,23 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 find_package(OpenCV REQUIRED)
 
 rosbuild_add_boost_directories()
-rosbuild_add_executable(record_node 
+
+#----
+rosbuild_add_executable(record
 src/record_node.cpp
 src/record_bagfile.cpp)
 
-target_link_libraries(record_node  ${OpenCV_LIBS})
+target_link_libraries(record ${OpenCV_LIBS})
+
+#----
+rosbuild_add_executable (apply_blur_noise 
+src/apply_blur_noise.cpp
+)
+target_link_libraries(apply_blur_noise ${OpenCV_LIBS})
+
+#----
+rosbuild_add_executable (create_dataset
+src/create_dataset.cpp
+)
+target_link_libraries(create_dataset ${OpenCV_LIBS})
+

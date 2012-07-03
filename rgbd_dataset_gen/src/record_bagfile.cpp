@@ -1,4 +1,4 @@
-#include "record_bagfile/record_bagfile.h"
+#include "rgbd_dataset_gen/record_bagfile.h"
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui/highgui.hpp>

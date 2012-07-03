@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ros/ros.h>
 
-#include "record_bagfile/record_bagfile.h"
+#include "rgbd_dataset_gen/record_bagfile.h"
 
 using namespace ros;
 using namespace sensor_msgs;
